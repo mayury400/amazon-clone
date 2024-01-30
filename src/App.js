@@ -6,6 +6,7 @@ import {BrowserRouter as Router,Routes,Route,BrowserRouter,} from 'react-router-
 import Home from './Home';
 import Checkout from './Checkout';
 import Login from './Login';
+import Payment from './Payment';
 import { useEffect } from 'react';
 import { auth } from './firebase';
 import { useStateValue } from './StateProvider';
@@ -42,6 +43,7 @@ auth.onAuthStateChanged(authUser => {
             <Route path='/' element={[<Home />]} />
             <Route path='/Checkout' element={[<Checkout />]} />
             <Route path='/Login' element={[<Login/>]} />
+            <Route path='/Payment' element={[<Payment/>]} />
           </Routes>
         </div>
       </Router>
